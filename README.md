@@ -2,10 +2,10 @@
 
 A [Redux](https://www.npmjs.com/package/redux) learning playground, broken up into parts (as branches):
 
-- [`base`](https://github.com/trevordmiller/redux-playground/tree/base): Scaffolding, prior to adding any Redux stuff
-- [`core`](https://github.com/trevordmiller/redux-playground/tree/core): Minimal Redux setup (TDD vanilla JS)
-- [`scale`](https://github.com/trevordmiller/redux-playground/tree/scale): Additions on top of `core` ^ for scaling Redux apps easier (TDD vanilla JS)
-- [`react-specific`](https://github.com/trevordmiller/redux-playground/tree/react-specific): A fork of `scale` ^ with optimizations for React apps using Redux and example components (React.js + UI bindings)
+1. [`base`](https://github.com/trevordmiller/redux-playground/tree/base): Scaffolding, prior to adding any Redux stuff
+1. [`core`](https://github.com/trevordmiller/redux-playground/tree/core): Minimal Redux setup (TDD vanilla JS)
+1. [`scale`](https://github.com/trevordmiller/redux-playground/tree/scale): Additions on top of `core` ^ for scaling Redux apps easier (TDD vanilla JS)
+1. [`react-specific`](https://github.com/trevordmiller/redux-playground/tree/react-specific): A fork of `scale` ^ with optimizations for React apps using Redux and example components (React.js + UI bindings)
 
 ---
 
