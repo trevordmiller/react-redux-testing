@@ -18,19 +18,21 @@ A [Redux](https://www.npmjs.com/package/redux) learning playground, broken up in
 
 ---
 
-## Redux basics
-
-### Benefits
+### Benefits of using Redux
 
 Redux manages app state. It makes this dead simple because it embraces **one-way data flow** with a **functional programming approach** (pure functions, no side effects). This approach makes app state predictable and serializable - which means you can **test** it easily and use all sorts of cool developer tools like **hot reloading** and **time travel debugging**.
 
-### How it works
+---
+
+### How Redux works
 
 **Redux has just three pieces: A store, actions, and reducers.**
 
 1. All state is stored in a single **store** (immutable _object_).
 1. The store can only be updated by a **reducer** (pure _function_) that returns the next state (ie `(state, action) => state`).
 1. A reducer takes A) the store object (previous state) and B) an **action** (an _object_ that holds what _type_ of change should happen and any related data needed to do so).
+
+---
 
 #### Tips
 
@@ -48,12 +50,12 @@ _More detailed information can be found on the [Redux package docs](https://www.
 
 ---
 
-### Disclaimer
+##### Disclaimer
 
 _This is not meant to replace the [excellent official Redux documentation](https://www.npmjs.com/package/redux). It has been built to give a condensed summary of what I learned from reading the docs. It also gives step-by-step setup examples (in layers) for review - starting with the MVP vanilla JS implementation; I hope this helps to show what is core "Redux" and what is tooling and other options on top of that, so that new users can solidify the core principles of Redux before mixing it with other tools commonly found in the ecosystem._
 
 ---
 
-### License
+##### License
 
 MIT
