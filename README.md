@@ -36,9 +36,13 @@ Redux manages app state. It makes this dead simple because it embraces **one-way
 
 - A store and action are both just objects. A reducer is just a function.
 - A store has three methods: `store.subscribe()`, `store.dispatch(action)`, `store.getState()`.
-- You can `subscribe` to a store manually or use bindings for your view layer (ie React, Angular etc) - _as is done in the `react-specific` branch_.
-- As your app grows, you can break into more reducers and compose them together.
+- You can `subscribe` to a store manually or use bindings for your view layer (ie React, Angular etc) - _as is shown in the `react-specific` branch ^_.
 - Actions require a `type` property which usually holds a string constant (ie `DO_SOMETHING`) which describes how a reducer should create the next state object. Other than `type`, an action can contain any other properties; in the branches in this repo, the Flux action standard (which wraps other datå in a `payload` object) is being used.
+- As your app grows, you can do some things to help it scale, _as is shown in the `scale` branch ^_
+  - Use action "creators" (pure factory functions) to create actions.
+  - Bind action creators to automatically dispatch.
+  - Use a constants file for action types.
+  - Break your main reducer function into smaller reducers and compose them together.
 
 _More detailed information can be found on the [Redux package docs](https://www.npmjs.com/package/redux)_
 
