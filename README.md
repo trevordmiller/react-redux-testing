@@ -26,13 +26,13 @@ Redux manages app state. It makes this dead simple because it embraces **one-way
 
 ### How it works
 
-**Redux has just three pieces**: A store, actions, and reducers.**
+**Redux has just three pieces: A store, actions, and reducers.**
 
 1. All state is stored in a single **store** (immutable _object_).
 1. The store can only be updated by a **reducer** (pure _function_) that returns the next state (ie `(state, action) => state`).
-1. A reducer takes 1) the store object (previous state) and 2) an **action** (an _object_ that holds what _type_ of change should happen and any related data needed to do so).
+1. A reducer takes A) the store object (previous state) and B) an **action** (an _object_ that holds what _type_ of change should happen and any related data needed to do so).
 
-### Tips
+#### Tips
 
 - A store and action are both just objects. A reducer is just a function.
 - A store has three methods: `store.subscribe()`, `store.dispatch(action)`, `store.getState()`.
