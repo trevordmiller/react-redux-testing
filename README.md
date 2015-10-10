@@ -1,6 +1,6 @@
 # redux-playground
 
-A [Redux](https://www.npmjs.com/package/redux) learning playground, broken up into four parts (as branches):
+A [Redux](https://www.npmjs.com/package/redux) learning playground, broken up into parts (as branches):
 
 - [`base`](https://github.com/trevordmiller/redux-playground/tree/base): Scaffolding, prior to adding any Redux stuff
 - [`core`](https://github.com/trevordmiller/redux-playground/tree/core): Minimal Redux setup (TDD vanilla JS)
@@ -12,7 +12,7 @@ A [Redux](https://www.npmjs.com/package/redux) learning playground, broken up in
 ## Getting Started
 
 1. Clone the project
-1. Checkout one of the three example branches ^
+1. Checkout one of the example branches ^
 1. `npm install`
 1. `npm start`
 
