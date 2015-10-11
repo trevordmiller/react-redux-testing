@@ -10,8 +10,8 @@ The example app is broken up into types of implementation _(as branches)_:
 
 Comparing the diffs of the branches may be helpful to see how everything fits together:
 
-- [Diff from `1-minimum` to `2-scaling`](https://github.com/trevordmiller/redux-playground/compare/2-scaling...1-minimum)
-- [Diff from `2-scaling` to `3-react-version`](https://github.com/trevordmiller/redux-playground/compare/3-react-version...2-scaling)
+- [Diff from `1-minimum` to `2-scaling`](https://github.com/trevordmiller/redux-playground/compare/1-minimum...2-scaling)
+- [Diff from `2-scaling` to `3-react-version`](https://github.com/trevordmiller/redux-playground/compare/2-scaling...3-react-version)
 
 ---
 
