@@ -10,8 +10,8 @@ The example app is broken up into types of implementation _(as branches)_:
 
 Comparing the diffs of the branches may be helpful to see how everything fits together:
 
-- [Diff from `1-minimum` to `2-scaling`](https://github.com/trevordmiller/redux-playground/compare/1-minimum...2-scaling)
-- [Diff from `2-scaling` to `3-react`](https://github.com/trevordmiller/redux-playground/compare/2-scaling...3-react)
+- [Diff between `1-minimum` and `2-scaling`](https://github.com/trevordmiller/redux-playground/compare/1-minimum...2-scaling)
+- [Diff between `2-scaling` and `3-react`](https://github.com/trevordmiller/redux-playground/compare/2-scaling...3-react)
 
 ---
 
@@ -34,9 +34,9 @@ Redux manages app state. It makes this dead simple because it embraces **one-way
 
 **Redux has just three pieces: A store, actions, and reducers.**
 
-1. All state is stored in a single **store** (immutable _object_).
-1. The store can only be updated by a **reducer** (pure _function_) that returns the next state (ie `(state, action) => state`).
-1. A reducer takes A) the store object (previous state) and B) an **action** (an _object_ that holds what _type_ of change should happen and any related data needed to do so).
+1. All state is stored in a single **store** (immutable _object_)
+1. The store can only be updated by a **reducer** (pure _function_) that returns the next state (ie `(state, action) => state`)
+1. A reducer takes A) the store object (previous state) and B) an **action** (an _object_ that holds what _type_ of change should happen and any related data needed to do so)
 
 ---
 
@@ -45,12 +45,12 @@ Redux manages app state. It makes this dead simple because it embraces **one-way
 - A store and action are both just objects. A reducer is just a function.
 - A store has three methods: `store.subscribe()`, `store.dispatch(action)`, `store.getState()`.
 - You can `subscribe` to a store manually or use bindings for your view layer (ie React, Angular etc) - _as is shown in the `3-react` branch ^_.
-- Actions require a `type` property which usually holds a string constant (ie `DO_SOMETHING`) which describes how a reducer should create the next state object. Other than `type`, an action can contain any other properties; in the branches in this repo, the Flux action standard (which wraps other datå in a `payload` object) is being used.
-- As your app grows, you can do some things to help it scale, _as is shown in the `2-scaling` branch ^_
-  - Use action "creators" (pure factory functions) to create actions.
+- Actions require a `type` property which usually holds a string constant (ie `DO_SOMETHING`) which describes how a reducer should create the next state object. Other than `type`, an action can contain any other properties; in the branches in this repo, the standard for _Flux_ actions (wrapping other data in a `payload` object) is being used.
+- As your app grows, you can do some things to help it scale, - _as is shown in the `2-scaling` branch ^_
+  - Use **action creators** (pure factory functions) to create actions.
   - Bind action creators to automatically dispatch.
-  - Use a constants file for action types.
-  - Break your main reducer function into smaller reducers and compose them together.
+  - Use string constant variables for action types.
+  - Break the main reducer into smaller reducers which can be composed together.
 
 _More detailed information can be found on the [Redux package docs](https://www.npmjs.com/package/redux)_
 
