@@ -1,11 +1,17 @@
 # redux-playground
 
-A [Redux](https://www.npmjs.com/package/redux) learning playground, broken up into parts (as branches):
+A [Redux](https://www.npmjs.com/package/redux) example app, using a collection of quotes that can be liked/unliked.
 
-1. [`base`](https://github.com/trevordmiller/redux-playground/tree/base): Scaffolding, prior to adding any Redux stuff
-1. [`core`](https://github.com/trevordmiller/redux-playground/tree/core): Minimal Redux setup (TDD vanilla JS)
-1. [`scale`](https://github.com/trevordmiller/redux-playground/tree/scale): Additions on top of `core` ^ for scaling Redux apps easier (TDD vanilla JS)
-1. [`react-specific`](https://github.com/trevordmiller/redux-playground/tree/react-specific): A fork of `scale` ^ with optimizations for React apps using Redux and example components (React.js + UI bindings)
+The example app is broken up into types of implementation _(as branches)_:
+
+1. [`1-minimum`](https://github.com/trevordmiller/redux-playground/tree/1-minimum): The minimum code required
+1. [`2-scaling`](https://github.com/trevordmiller/redux-playground/tree/2-scaling): Recommended changes to `1-minimal` ^, so that the code scales easier
+1.  [`3-react-version`](https://github.com/trevordmiller/redux-playground/tree/3-react-version): Recommended changes to `2-scaling` ^, for React apps and components
+
+Comparing the diffs of the branches may be helpful to see how everything fits together:
+
+- [Diff from `1-minimum` to `2-scaling`](https://github.com/trevordmiller/redux-playground/compare/2-scaling...1-minimum)
+- [Diff from `2-scaling` to `3-react-version`](https://github.com/trevordmiller/redux-playground/compare/3-react-version...2-scaling)
 
 ---
 
