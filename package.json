@@ -1,0 +1,26 @@
+{
+  "name": "redux-playground",
+  "version": "1.0.0",
+  "description": "Learning playground",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trevordmiller/redux-playground.git"
+  },
+  "author": "Trevor D. Miller <trevordmiller@icloud.com> (www.trevordmiller.com)",
+  "license": "MIT",
+  "keywords": [
+    "redux"
+  ],
+  "main": "./src/index",
+  "scripts": {
+    "start": "babel-node ./src/index",
+    "test": "mocha './src/**/*Test.js' --compilers js:babel/register"
+  },
+  "dependencies": {
+    "redux": "^3.0.2"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "mocha": "^2.3.3"
+  }
+}
