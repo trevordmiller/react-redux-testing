@@ -13,14 +13,21 @@
   ],
   "main": "./src/index",
   "scripts": {
-    "start": "babel-node ./src/index",
+    "start": "webpack-dev-server --content-base dist/",
     "test": "mocha './src/**/*Test.js' --compilers js:babel/register"
   },
   "dependencies": {
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "react-redux": "^3.1.0",
     "redux": "^3.0.2"
   },
   "devDependencies": {
     "babel": "^5.8.23",
-    "mocha": "^2.3.3"
+    "babel-loader": "^5.3.2",
+    "file-loader": "^0.8.4",
+    "mocha": "^2.3.3",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.0"
   }
 }
