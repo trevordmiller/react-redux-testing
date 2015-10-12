@@ -4,9 +4,9 @@ A [Redux](https://www.npmjs.com/package/redux) example app, using a collection o
 
 The example app is broken up into types of implementation _(as branches)_:
 
-1. [`1-minimum`](https://github.com/trevordmiller/redux-playground/tree/1-minimum): The minimum code required
-1. [`2-scaling`](https://github.com/trevordmiller/redux-playground/tree/2-scaling): Recommended changes to `1-minimal` ^, so that the code scales easier
-1.  [`3-react`](https://github.com/trevordmiller/redux-playground/tree/3-react): Recommended changes to `2-scaling` ^, for React apps and components
+1. [`1-minimum`](https://github.com/trevordmiller/redux-playground/tree/1-minimum): The minimum code required for a Redux app
+1. [`2-scaling`](https://github.com/trevordmiller/redux-playground/tree/2-scaling): Optional, but recommended changes to `1-minimal` ^, so that the code scales easier - including an extra piece of state to show how you can scale a Redux app
+1.  [`3-react`](https://github.com/trevordmiller/redux-playground/tree/3-react): Optional, but recommended changes to `2-scaling` ^, for React apps - including new React components that consume the Redux state to show how to connect Redux with a UI
 
 Comparing the diffs of the branches may be helpful to see how everything fits together:
 
