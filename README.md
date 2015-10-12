@@ -48,9 +48,8 @@ Redux manages app state. It makes this dead simple because it embraces **one-way
 - Actions require a `type` property which usually holds a string constant (ie `DO_SOMETHING`) which describes how a reducer should create the next state object. Other than `type`, an action can contain any other properties; in the branches in this repo, the standard for _Flux_ actions (wrapping other data in a `payload` object) is being used.
 - As your app grows, you can do some things to help it scale, - _as is shown in the `2-scaling` branch ^_
   - Use **action creators** (pure factory functions) to create actions.
-  - Bind action creators to automatically dispatch.
-  - Use string constant variables for action types.
-  - Break the main reducer into smaller reducers which can be composed together.
+  - Use string constants declared and exported from a single file for action types.
+  - Break the main reducer into smaller reducers - which only deal with their slice of the state - then compose them together.
 
 _More detailed information can be found on the [Redux package docs](https://www.npmjs.com/package/redux)_
 
