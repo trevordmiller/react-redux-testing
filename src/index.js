@@ -1,5 +1,6 @@
 import {store} from './state/store';
 import {addQuoteById, removeQuoteById, likeQuoteById, unlikeQuoteById} from './state/quote/quoteActionCreators';
+import {updateThemeColor} from './state/theme/themeActionCreators';
 
 store.subscribe(() => {
   const newState = store.getState();
@@ -8,6 +9,10 @@ store.subscribe(() => {
     ${JSON.stringify(newState, null, 2)}
   `);
 });
+
+store.dispatch(updateThemeColor({
+  color: '#E7CC87'
+}));
 
 store.dispatch(addQuoteById({
   text: 'The best way to cheer yourself up is to try to cheer somebody else up.',
@@ -28,6 +33,10 @@ store.dispatch(addQuoteById({
   author: 'Socrates',
   id: 3,
   likeCount: 0
+}));
+
+store.dispatch(updateThemeColor({
+  color: '#777777'
 }));
 
 store.dispatch(removeQuoteById({

@@ -1,4 +1,4 @@
 import {createStore} from 'redux';
-import quoteReducer from './quote/quoteReducer';
+import mainReducer from './mainReducer';
 
-export const store = createStore(quoteReducer);
+export const store = createStore(mainReducer);

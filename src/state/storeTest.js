@@ -1,10 +1,15 @@
 import assert from 'assert';
 import {store} from './store';
 import {addQuoteById, removeQuoteById, likeQuoteById, unlikeQuoteById} from './quote/quoteActionCreators';
+import {updateThemeColor} from './theme/themeActionCreators';
 
 describe('store', () => {
 
   it('should have the correct state after a series of actions', () => {
+
+    store.dispatch(updateThemeColor({
+      color: '#E7CC87'
+    }));
 
     store.dispatch(addQuoteById({
       text: 'The best way to cheer yourself up is to try to cheer somebody else up.',
@@ -25,6 +30,10 @@ describe('store', () => {
       author: 'Socrates',
       id: 3,
       likeCount: 0
+    }));
+
+    store.dispatch(updateThemeColor({
+      color: '#777777'
     }));
 
     store.dispatch(removeQuoteById({
@@ -54,7 +63,10 @@ describe('store', () => {
           id: 3,
           likeCount: 1
         }
-      ]
+      ],
+      theme: {
+        color: '#777777'
+      }
     };
 
     assert.deepEqual(actual, expected);

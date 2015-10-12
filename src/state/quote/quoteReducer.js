@@ -1,7 +1,9 @@
-export default function quoteReducer(state = {quotes: []}, action) {
+import {ADD_QUOTE_BY_ID, REMOVE_QUOTE_BY_ID, LIKE_QUOTE_BY_ID, UNLIKE_QUOTE_BY_ID} from '../ActionTypes';
+
+export default function quoteReducer(state = [], action) {
 
   function changeLikeCountById(change) {
-    const newQuotes = state.quotes
+    const newQuotes = state
       .map(quote => {
         if(quote.id === action.payload.id) {
           switch (change) {
@@ -24,27 +26,19 @@ export default function quoteReducer(state = {quotes: []}, action) {
 
   switch(action.type) {
 
-    case 'ADD_QUOTE_BY_ID':
-      return {
-        quotes: state.quotes
-          .concat(action.payload)
-      };
+    case ADD_QUOTE_BY_ID:
+      return state
+        .concat(action.payload);
 
-    case 'REMOVE_QUOTE_BY_ID':
-      return {
-        quotes: state.quotes
-          .filter(quote => quote.id !== action.payload.id)
-      };
+    case REMOVE_QUOTE_BY_ID:
+      return state
+        .filter(quote => quote.id !== action.payload.id);
 
-    case 'LIKE_QUOTE_BY_ID':
-      return {
-        quotes: changeLikeCountById('increment')
-      };
+    case LIKE_QUOTE_BY_ID:
+      return changeLikeCountById('increment');
 
-    case 'UNLIKE_QUOTE_BY_ID':
-      return {
-        quotes: changeLikeCountById('decrement')
-      };
+    case UNLIKE_QUOTE_BY_ID:
+      return changeLikeCountById('decrement');
 
     default:
       return state;

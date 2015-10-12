@@ -1,4 +1,5 @@
 import assert from 'assert';
+import {ADD_QUOTE_BY_ID, REMOVE_QUOTE_BY_ID, LIKE_QUOTE_BY_ID, UNLIKE_QUOTE_BY_ID} from '../ActionTypes';
 import {addQuoteById, removeQuoteById, likeQuoteById, unlikeQuoteById} from './quoteActionCreators';
 
 describe('quote actions and action creators', () => {
@@ -14,7 +15,7 @@ describe('quote actions and action creators', () => {
       };
       const actual = addQuoteById(examplePayload);
       const expected = {
-        type: 'ADD_QUOTE_BY_ID',
+        type: ADD_QUOTE_BY_ID,
         payload: examplePayload
       };
       assert.deepEqual(actual, expected);
@@ -29,7 +30,7 @@ describe('quote actions and action creators', () => {
       };
       const actual = removeQuoteById(examplePayload);
       const expected = {
-        type: 'REMOVE_QUOTE_BY_ID',
+        type: REMOVE_QUOTE_BY_ID,
         payload: examplePayload
       };
       assert.deepEqual(actual, expected);
@@ -44,7 +45,7 @@ describe('quote actions and action creators', () => {
       };
       const actual = likeQuoteById(examplePayload);
       const expected = {
-        type: 'LIKE_QUOTE_BY_ID',
+        type: LIKE_QUOTE_BY_ID,
         payload: examplePayload
       };
       assert.deepEqual(actual, expected);
@@ -59,7 +60,7 @@ describe('quote actions and action creators', () => {
       };
       const actual = unlikeQuoteById(examplePayload);
       const expected = {
-        type: 'UNLIKE_QUOTE_BY_ID',
+        type: UNLIKE_QUOTE_BY_ID,
         payload: examplePayload
       };
       assert.deepEqual(actual, expected);
