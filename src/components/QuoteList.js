@@ -1,17 +1,21 @@
 import React from 'react';
-import Quote from '../Quote/Quote';
+import Quote from './Quote';
+import {container} from '../shared/styleGuide';
 
 class Quotes extends React.Component {
   render() {
     const quotes = this.props.quotes.map(quote => {
       return (
-        <Quote key={quote.id} quote={quote} />
+        <Quote
+          key={quote.id}
+          quote={quote}
+        />
       );
     });
     return (
-      <main>
+      <div style={container}>
         {quotes}
-      </main>
+      </div>
     );
   }
 }
