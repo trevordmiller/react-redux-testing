@@ -1,4 +1,5 @@
 export const COLOR_FILL = '#FFFFFF';
+export const COLOR_WARNING = '#F96A5C';
 export const COLOR_LIGHT_WHITE = 'rgba(255, 255, 255, 0.5)';
 export const COLOR_LIGHT_BLACK = 'rgba(0, 0, 0, .5)';
 export const COLOR_LIGHT_GRAY = '#EEEEEE';

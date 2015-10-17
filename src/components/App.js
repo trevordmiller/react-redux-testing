@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import '../shared/reset.css';
 import {wrapper, container} from '../shared/styleGuide';
-import {addQuoteById, likeQuoteById} from '../state/quote/quoteActionCreators';
+import {addQuoteById, removeQuoteById, likeQuoteById, unlikeQuoteById} from '../state/quote/quoteActionCreators';
 import {updateThemeColor} from '../state/theme/themeActionCreators';
 import AddQuote from './AddQuote';
 import QuoteList from './QuoteList';
@@ -25,7 +25,9 @@ class App extends React.Component {
         <QuoteList
           quotes={this.props.quotes}
           theme={this.props.theme}
+          removeQuoteById={this.props.removeQuoteById}
           likeQuoteById={this.props.likeQuoteById}
+          unlikeQuoteById={this.props.unlikeQuoteById}
         />
         <ThemeSelect
           theme={this.props.theme}
@@ -37,11 +39,13 @@ class App extends React.Component {
 }
 
 App.propTypes = {
+  quotes: React.PropTypes.array.isRequired,
   addQuoteById: React.PropTypes.func.isRequired,
   likeQuoteById: React.PropTypes.func.isRequired,
-  updateThemeColor: React.PropTypes.func.isRequired,
-  quotes: React.PropTypes.array.isRequired,
-  theme: React.PropTypes.object.isRequired
+  unlikeQuoteById: React.PropTypes.func.isRequired,
+  removeQuoteById: React.PropTypes.func.isRequired,
+  theme: React.PropTypes.object.isRequired,
+  updateThemeColor: React.PropTypes.func.isRequired
 };
 
 // Use react-redux's connect() method to specify how to map pieces of the store to the provided component's props
@@ -56,7 +60,9 @@ export default connect(
   select,
   {
     addQuoteById,
+    removeQuoteById,
     likeQuoteById,
+    unlikeQuoteById,
     updateThemeColor
   }
 )(App);

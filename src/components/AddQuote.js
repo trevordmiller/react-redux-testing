@@ -4,7 +4,7 @@ import createUniqueId from '../shared/createUniqueId';
 
 class AddQuote extends React.Component {
 
-  handleButtonClick() {
+  handleSubmit() {
     const textNode = this.refs.text;
     const authorNode = this.refs.author;
     const payload = {
@@ -36,7 +36,7 @@ class AddQuote extends React.Component {
         </input>
         <a
           style={button}
-          onClick={this.handleButtonClick.bind(this)}>
+          onClick={this.handleSubmit.bind(this)}>
           Add Quote
         </a>
       </div>

@@ -10,6 +10,8 @@ const QuoteList = (props) => {
         key={quote.id}
         quote={quote}
         likeQuoteById={props.likeQuoteById}
+        unlikeQuoteById={props.unlikeQuoteById}
+        removeQuoteById={props.removeQuoteById}
       />
     );
   });
@@ -22,7 +24,10 @@ const QuoteList = (props) => {
 
 QuoteList.propTypes = {
   quotes: React.PropTypes.array.isRequired,
-  likeQuoteById: React.PropTypes.func.isRequired
+  removeQuoteById: React.PropTypes.func.isRequired,
+  likeQuoteById: React.PropTypes.func.isRequired,
+  unlikeQuoteById: React.PropTypes.func.isRequired,
+  theme: React.PropTypes.object.isRequired
 };
 
 export default QuoteList;
