@@ -4,7 +4,7 @@ export const COLOR_LIGHT_BLACK = 'rgba(0, 0, 0, .5)';
 export const COLOR_LIGHT_GRAY = '#EEEEEE';
 export const SPACING_MEDIUM = '1rem';
 export const SPACING_SMALL = '0.7rem';
-export const FONT_SIZE_SMALL = '0.8rem';
+export const FONT_SIZE_MEDIUM = '1rem';
 export const BORDER_RADIUS_MEDIUM = '7px';
 
 export const wrapper = {
@@ -33,7 +33,7 @@ export const input = {
   width: '100%',
   maxWidth: '100%',
   padding: `${SPACING_SMALL} ${SPACING_MEDIUM}`,
-  fontSize: FONT_SIZE_SMALL,
+  fontSize: FONT_SIZE_MEDIUM,
   ...rounded,
   ...verticalAlignmentFix
 };
@@ -45,6 +45,10 @@ export const button = {
   display: 'block',
   textAlign: 'center',
   ...rounded
+};
+
+export const emphasis = {
+  fontStyle: 'italic'
 };
 
 export const subtle = {

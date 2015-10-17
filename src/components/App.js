@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import '../shared/reset.css';
 import {wrapper, container} from '../shared/styleGuide';
-import {addQuoteById} from '../state/quote/quoteActionCreators';
+import {addQuoteById, likeQuoteById} from '../state/quote/quoteActionCreators';
 import {updateThemeColor} from '../state/theme/themeActionCreators';
 import AddQuote from './AddQuote';
 import QuoteList from './QuoteList';
@@ -12,25 +12,24 @@ class App extends React.Component {
 
   render() {
 
-    // These props are injected from the Redux store by react-redux's connect() method
-    const {addQuoteById, quotes, theme} = this.props;
-
     return (
       <div style={wrapper}>
         <div
           style={{
             ...container,
-            background: theme.color
+            background: this.props.theme.color
           }}
         >
-          <AddQuote addQuoteById={addQuoteById} />
+          <AddQuote addQuoteById={this.props.addQuoteById} />
         </div>
         <QuoteList
-          quotes={quotes}
+          quotes={this.props.quotes}
+          theme={this.props.theme}
+          likeQuoteById={this.props.likeQuoteById}
         />
         <ThemeSelect
-          theme={theme}
-          updateThemeColor={updateThemeColor}
+          theme={this.props.theme}
+          updateThemeColor={this.props.updateThemeColor}
         />
       </div>
     );
@@ -39,6 +38,7 @@ class App extends React.Component {
 
 App.propTypes = {
   addQuoteById: React.PropTypes.func.isRequired,
+  likeQuoteById: React.PropTypes.func.isRequired,
   updateThemeColor: React.PropTypes.func.isRequired,
   quotes: React.PropTypes.array.isRequired,
   theme: React.PropTypes.object.isRequired
@@ -52,4 +52,11 @@ function select(state) {
   };
 }
 
-export default connect(select, {addQuoteById, updateThemeColor})(App);
+export default connect(
+  select,
+  {
+    addQuoteById,
+    likeQuoteById,
+    updateThemeColor
+  }
+)(App);

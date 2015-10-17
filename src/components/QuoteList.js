@@ -6,8 +6,10 @@ const QuoteList = (props) => {
   const quotes = props.quotes.map(quote => {
     return (
       <Quote
+        theme={props.theme}
         key={quote.id}
         quote={quote}
+        likeQuoteById={props.likeQuoteById}
       />
     );
   });
@@ -19,7 +21,8 @@ const QuoteList = (props) => {
 };
 
 QuoteList.propTypes = {
-  quotes: React.PropTypes.array.isRequired
+  quotes: React.PropTypes.array.isRequired,
+  likeQuoteById: React.PropTypes.func.isRequired
 };
 
 export default QuoteList;

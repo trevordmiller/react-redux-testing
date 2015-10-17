@@ -1,8 +1,15 @@
 import React from 'react';
-import {COLOR_FILL, container, cushion, subtle, alignRight, rounded} from '../shared/styleGuide';
+import {COLOR_FILL, container, cushion, emphasis, subtle, alignRight, rounded} from '../shared/styleGuide';
 
 const Quote = (props) => {
-  const quote = props.quote;
+
+  function handleButtonClick() {
+    const payload = {
+      id: props.quote.id
+    };
+    props.likeQuoteById(payload);
+  }
+
   return (
     <div
       style={{
@@ -11,23 +18,28 @@ const Quote = (props) => {
         ...rounded,
         background: COLOR_FILL
       }}
-      key={quote.id}
+      key={props.quote.id}
     >
-      <div style={cushion}>
-        "{quote.text}"
+      <div style={emphasis}>
+        "{props.quote.text}"
       </div>
       <div style={{...subtle, ...alignRight}}>
-        {quote.author}
-      </div>
-      <div style={{...subtle, ...alignRight}}>
-        {quote.likeCount} likes
+        <div>{props.quote.author}</div>
+        <div>{props.quote.likeCount} likes</div>
+          <a
+            style={{color: props.theme.color}}
+            onClick={handleButtonClick}
+          >
+            Like
+          </a>
       </div>
     </div>
   );
 };
 
 Quote.propTypes = {
-  quote: React.PropTypes.object.isRequired
+  quote: React.PropTypes.object.isRequired,
+  theme: React.PropTypes.object.isRequired
 };
 
 export default Quote;
