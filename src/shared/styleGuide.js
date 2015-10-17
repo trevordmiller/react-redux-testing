@@ -20,10 +20,6 @@ export const cushion = {
   marginBottom: SPACING_MEDIUM
 };
 
-export const well = {
-  background: 'rgba(93, 196, 198, 1.0)'
-};
-
 export const rounded = {
   borderRadius: BORDER_RADIUS_MEDIUM
 };
@@ -57,4 +53,10 @@ export const subtle = {
 
 export const alignRight = {
   textAlign: 'right'
+};
+
+export const corner = {
+  position: 'fixed',
+  bottom: SPACING_MEDIUM,
+  right: SPACING_MEDIUM
 };

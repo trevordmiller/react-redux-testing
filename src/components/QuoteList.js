@@ -1,6 +1,6 @@
 import React from 'react';
-import Quote from './Quote';
 import {container} from '../shared/styleGuide';
+import Quote from './Quote';
 
 const QuoteList = (props) => {
   const quotes = props.quotes.map(quote => {

@@ -1,9 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import '../shared/reset.css';
+import {wrapper, container} from '../shared/styleGuide';
 import {addQuoteById} from '../state/quote/quoteActionCreators';
+import {updateThemeColor} from '../state/theme/themeActionCreators';
 import AddQuote from './AddQuote';
 import QuoteList from './QuoteList';
-import {wrapper, container, well} from '../shared/styleGuide';
+import ThemeSelect from './ThemeSelect';
 
 class App extends React.Component {
 
@@ -14,12 +17,20 @@ class App extends React.Component {
 
     return (
       <div style={wrapper}>
-        <div style={{...container, ...well}}>
+        <div
+          style={{
+            ...container,
+            background: theme.color
+          }}
+        >
           <AddQuote addQuoteById={addQuoteById} />
         </div>
         <QuoteList
-          style={{background: theme.color}}
           quotes={quotes}
+        />
+        <ThemeSelect
+          theme={theme}
+          updateThemeColor={updateThemeColor}
         />
       </div>
     );
@@ -28,6 +39,7 @@ class App extends React.Component {
 
 App.propTypes = {
   addQuoteById: React.PropTypes.func.isRequired,
+  updateThemeColor: React.PropTypes.func.isRequired,
   quotes: React.PropTypes.array.isRequired,
   theme: React.PropTypes.object.isRequired
 };
@@ -40,4 +52,4 @@ function select(state) {
   };
 }
 
-export default connect(select, {addQuoteById})(App);
+export default connect(select, {addQuoteById, updateThemeColor})(App);
