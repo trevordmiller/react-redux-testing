@@ -1,10 +1,11 @@
 import React from 'react';
 import {COLOR_FILL, COLOR_WARNING, container, cushion, emphasis, subtle, alignRight, rounded} from '../shared/styleGuide';
+import Icon from './Icon';
 
 class Quote extends React.Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       liked: false
     };
@@ -45,23 +46,22 @@ class Quote extends React.Component {
         </div>
         <div style={{...subtle, ...alignRight}}>
           <div>{this.props.quote.author}</div>
-          <div>{this.props.quote.likeCount} likes</div>
-            <div>
-              <a
-                style={{color: this.props.theme.color}}
-                onClick={this.handleLikesClick.bind(this)}
-              >
-                {this.state.liked ? 'Unlike' : 'Like'}
-              </a>
-            </div>
-            <div>
-              <a
-                style={{color: COLOR_WARNING}}
-                onClick={this.handleRemoveClick.bind(this)}
-              >
-                Remove
-              </a>
-            </div>
+          <div>
+            <a
+              style={{color: this.props.theme.color}}
+              onClick={this.handleLikesClick.bind(this)}
+            >
+              <Icon name='thumbs-up' active={this.state.liked} /> {this.props.quote.likeCount}
+            </a>
+          </div>
+          <div>
+            <a
+              style={{color: COLOR_WARNING}}
+              onClick={this.handleRemoveClick.bind(this)}
+            >
+            <Icon name='trash' />
+            </a>
+          </div>
         </div>
       </div>
     );
