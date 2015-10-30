@@ -2,7 +2,7 @@
 
 An example of building a test-driven (TDD) React and [Redux](https://www.npmjs.com/package/redux) app; we will be building a "Quote" app that lets you add, remove, like, and change the theme of quotes:
 
-![App screenshots](./quote-app.png)
+![App screenshots](http://i.imgur.com/csijGLz.png)
 
 The example app is broken up into types of implementation _(as branches)_:
 
