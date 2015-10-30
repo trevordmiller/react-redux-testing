@@ -1,6 +1,8 @@
-# redux-playground
+# react-redux-testing
 
-A [Redux](https://www.npmjs.com/package/redux) example app, using a collection of quotes that can be liked/unliked.
+An example of building a test-driven (TDD) React and [Redux](https://www.npmjs.com/package/redux) app; we will be building a "Quote" app that lets you add, remove, like, and change the theme of quotes:
+
+![App screenshots](./quote-app.png)
 
 The example app is broken up into types of implementation _(as branches)_:
 
